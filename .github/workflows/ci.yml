@@ -1,0 +1,31 @@
+name: "Streakify CI"
+
+on:
+  push:
+    branches:
+      - main
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 1.24.1
+      - name: Install dependencies
+        run: go mod tidy
+      - name: Run for repositories
+        run: go test ./app/repositories/... --cover
+      - name: Run for services
+        run: go test ./app/services/... -cover
+      - name: Run tests for controllers
+        run: |
+          go test ./app/controllers/... -cover
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v2
+        with:
+          file: coverage.out

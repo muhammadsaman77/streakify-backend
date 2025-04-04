@@ -1,0 +1,1 @@
+ALTER TABLE "activities" DROP COLUMN "last_alert_sent_at";

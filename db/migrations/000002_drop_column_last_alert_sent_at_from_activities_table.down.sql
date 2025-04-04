@@ -1,0 +1,1 @@
+ALTER TABLE "activities" ADD COLUMN "last_alert_sent_at" timestamp;

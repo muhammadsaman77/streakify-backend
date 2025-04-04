@@ -1,0 +1,5 @@
+mode: set
+github.com/muhammadsaman77/streakify-backend/app/repositories/user_repository.go:18.41,20.2 1 1
+github.com/muhammadsaman77/streakify-backend/app/repositories/user_repository.go:22.98,24.2 1 0
+github.com/muhammadsaman77/streakify-backend/app/repositories/user_repository.go:26.112,30.2 3 1
+github.com/muhammadsaman77/streakify-backend/app/repositories/user_repository_mock.go:12.62,15.2 2 0
